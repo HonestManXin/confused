@@ -1,15 +1,7 @@
 #! /bin/bash
 
-hello=
-echo "\$hello (null value) = $hello"
+quote=$'\042'
 
-files=`ls -l`
-echo "$files"
-
-arch=$(uname -m)
-echo $arch
-
-
-
+echo " $quote this is a quoted string"
 
 exit 0
