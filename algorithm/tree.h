@@ -65,7 +65,7 @@ void pre_travel(pTree root)
     {
         pre_travel(root->lchild);
     }
-    printf("%d number",root->data);
+    printf("%d-->",root->data);
     if(root->rchild != NULL)
     {
         pre_travel(root->rchild);
