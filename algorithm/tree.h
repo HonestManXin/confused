@@ -72,3 +72,13 @@ void pre_travel(pTree root)
     }
 }
 
+void free_tree(pTree root)
+{
+    if(root == NULL)
+        return ;
+    free_tree(root->lchild);
+    free_tree(root->rchild);
+    free(root);
+}
+
+
