@@ -1,13 +1,16 @@
-#include "test.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-void testfunc(int a)
+int main()
 {
-    printf("%d \n",a);
-}
+    pid_t gid,pid;
+    pid_t sid;
+    gid = getpgrp();
+    pid= getpid();
 
-
-void fortest()
-{
-    testfunc(1);
+    printf ( "pid=%d gid=%d \n",pid,gid );
+    sid = getsid(0);
+    printf ( "sid = %d \n",sid );
+    return 0;
 }
